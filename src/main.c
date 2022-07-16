@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "../include/entry.h"
 #include "../include/file.h"
 #include "../include/customer.h"
@@ -8,7 +9,7 @@
 int main(void) {
     printf("Main entry start.\n");
     while (1) {
-        char *input;
+        char *input = malloc(40);
         scanf("%s", input);
         printf("Receive from user, %s", input);
         operate(input);
